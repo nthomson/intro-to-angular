@@ -1,0 +1,15 @@
+.reveal .slides img.simple {
+  border:0;
+  background: 0;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+.reveal .slides .bottom-space {
+  margin-bottom: 100px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: none !important;
+}
