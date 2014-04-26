@@ -1,0 +1,18 @@
+<div class='slide-replace'>
+  <div class='pane' ng-class="{reveal: show}">
+    <div class='initial' ng-click='show=true'>
+      <img src='{{logo}}' />
+    </div>
+    <div class='replacement'>
+      <img src='{{icon}}' ng-click='show=false' />
+      <div class='forms'>
+        <p>
+          <input type="text" class="form-control" placeholder="{{name}} Access Key" ng-model="service.access" />
+        </p>
+        <p>
+          <input type="text" class="form-control" placeholder="{{name}} Secret Key" ng-model="service.secret" />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

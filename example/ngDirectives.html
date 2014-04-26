@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Angular Directives in AngularJS</title>
+  <script src="/js/angular.min.js"></script>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/examples.css" />
+</head>
+<body ng-app>
+  <div class="container">
+    <h2 class="row text-center">Built-in Angular Directives</h2>
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6">
+
+        <!-- Slide Replace Widget! -->
+        <div class="slide-replace">
+          <div class="pane" ng-class="{reveal: show}">
+            <div class="initial" ng-click="show=true">
+              <img src="/img/facebook_large.png" />
+            </div>
+            <div class="replacement">
+              <img src="/img/facebook_small.png" ng-click="show=false" />
+              <div class="forms">
+                <p>
+                  <input type="text" class="form-control" placeholder="Facebook Access Key" ng-model="fbAccess" />
+                </p>
+                <p>
+                  <input type="text" class="form-control" placeholder="Facebook Secret Key" ng-model="fbSecret" />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Facebook Access Key:</strong> {{fbAccess}}
+            </li>
+            <li class="list-group-item">
+              <strong>Facebook Secret Key:</strong> {{fbSecret}}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <a class="next" href="cspDirectives.html">Next</a>
+  <a class="previous" href="databind.html">Previous</a>
+</body>
+</html>

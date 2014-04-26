@@ -38,12 +38,12 @@
         </section>
 
         <section>
-          <h2>The Five D's</h2>
+          <h2>The Five D's of <span class='strike'>Dodgeball</span> Angular</h2>
           <ul>
-            <li class='fragment'>Data-binding</li>
             <li class='fragment'>Directives</li>
+            <li class='fragment'>Data-binding</li>
             <li class='fragment'>Dependency Injection</li>
-            <li class='fragment'>Declarative Interfaces</li>
+            <li class='fragment'>Declarative Views</li>
             <li class='fragment'>Directives</li>
           </ul>
         </section>
@@ -53,19 +53,44 @@
           <pre><code class='html xml'>
   <div class="app" ng-app>
     <div ng-controller="bindCtrl">
-      <label>Name: <input ng-model="name"></label>
-      <p>Hello, {{name}}!</p>
+      <label>Name: <input ng-model="userName"></label>
+      <p>Hello, {{userName}}!</p>
     </div>
   </div>
         </code></pre>
         </section>
 
         <section>
-          <pre><code class='javascript'>// Angular Directives</code></pre>
+          <h2>Angular Directives</h2>
+          <pre><code class='html xml'>
+  <div class='slide-replace'>
+    <div class='pane' ng-class="{reveal: show}">
+      <div class='initial' ng-click='show=true'>
+        <img src='/img/facebook_large.png' />
+      </div>
+      <div class='replacement'>
+        <img src='/img/facebook_small.png' ng-click='show=false' />
+        <div class='forms'>
+          <input type="text" class="form-control" ng-model="fbAccess" />
+          <input type="text" class="form-control" ng-model="fbSecret" />
+        </div>
+      </div>
+    </div>
+  </div>
+          </code></pre>
         </section>
 
         <section>
-          <pre><code class='javascript'>// Custom Directives</code></pre>
+          <h2>Custom Directives</h2>
+          <pre><code class='html xml'>
+  &lt;csp-slide-replace
+    name='Facebook'
+    logo='/img/facebook_large.png'
+    icon='/img/facebook_small.png'
+    service='facebook'
+  >&lt;/csp-slide-replace>
+
+</code></pre>
         </section>
 
         <section>

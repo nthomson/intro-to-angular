@@ -1,7 +1,121 @@
 body {
   padding: 20px;
+  padding-top: 150px;
+/*  background: url('http://nnlfilm.com/wp-content/uploads/2013/01/dust.png');*/
+  background: #ddd;
 }
 
 h2 {
   margin-bottom: 50px;
+}
+
+.well {
+  background-color: #fff;
+}
+
+.next {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.previous {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+.slide-replace {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  padding: 0;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+}
+.slide-replace:hover {
+  background: #f9f9f9;
+  /**/
+}
+.slide-replace .pane {
+  width: 200%;
+  height: 100%;
+  overflow: auto;
+  -webkit-transition-delay: 0;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-delay: 0;
+  -moz-transition-duration: 0.5s;
+  -moz-transition-property: all;
+  -moz-transition-timing-function: linear;
+  -o-transition-delay: 0;
+  -o-transition-duration: 0.5s;
+  -o-transition-property: all;
+  -o-transition-timing-function: linear;
+  transition-delay: 0;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: linear;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide-replace .pane.reveal {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.slide-replace .initial, .slide-replace .replacement {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.slide-replace .initial {
+  text-align: center;
+  padding-top: 25px;
+  cursor: pointer;
+}
+.slide-replace .initial:hover:after {
+  font-family: FontAwesome;
+  content: '\f0da';
+  position: absolute;
+  font-size: 30px;
+  right: 20px;
+  top: 0;
+  line-height: 100px;
+  color: #ccc;
+}
+.slide-replace .initial img {
+  height: 50px;
+}
+.slide-replace .replacement {
+  position: relative;
+}
+.slide-replace .replacement img {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  cursor: pointer;
+}
+.slide-replace .replacement img.noclick {
+  cursor: default;
+}
+.slide-replace .replacement .forms {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.slide-replace .replacement p {
+  margin: 10px;
+}
+.slide-replace .replacement p {
+  margin: 10px;
 }
